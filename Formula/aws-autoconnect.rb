@@ -2,8 +2,8 @@
 class AwsAutoconnect < Formula
   desc "Menu bar app that keeps AWS SSO signed in and connects AWS Client VPN (SAML)"
   homepage "https://github.com/alexdevlabs/aws-auto-connect"
-  url "https://github.com/alexdevlabs/aws-auto-connect/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "3b4dbe3bfa9a0ffe5702eb631e4db055ae4fb886bb52a52d7646bcbef7525923"
+  url "https://github.com/alexdevlabs/aws-auto-connect/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "644ce77bcae7fbc962bb4329d6827f4734eeee532b05ebd60153c86fbe021234"
   license "MIT"
   head "https://github.com/alexdevlabs/aws-auto-connect.git", branch: "main"
 
@@ -33,10 +33,10 @@ class AwsAutoconnect < Formula
 
   def caveats
     <<~EOS
-      Start it once; it copies itself to ~/Applications and runs from there:
+      Start it once; it copies itself to /Applications (or ~/Applications) and runs from there:
         open "#{opt_prefix}/AWS AutoConnect.app"
       After `brew upgrade`, the copy updates itself the next time it starts.
-      `brew uninstall` leaves ~/Applications/AWS AutoConnect.app; delete it by hand.
+      `brew uninstall` leaves that copy of AWS AutoConnect.app; delete it by hand.
 
       For the VPN, open the VPN tab and click "Install Helper…" (asks for your admin password once).
     EOS
